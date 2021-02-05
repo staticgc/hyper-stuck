@@ -33,7 +33,7 @@ bash ../gencert.sh
 2. Build server
 
 ```bash
-go build ./cmd/dtsrv
+go build ./cmd/h2srv
 ```
 
 3. Build go client
