@@ -3,9 +3,11 @@
 
 ## Layout of the repo
 
-./cmd/h2srv => Go Http Server
-./cmd/h2go => Go Http Client
-./src/main.rs => Rust Http Client
+* `./cmd/h2srv` => Go Http Server
+
+* `./cmd/h2go` => Go Http Client
+
+* `./src/main.rs` => Rust Http Client
 
 ## What happens in this client
 
@@ -82,7 +84,9 @@ export HTEST_FUT_LIMIT=400
 # Number of requests to be made
 export HTEST_REQ_COUNT=100000
 
-# 
+# Size of the buffer sent in each request (below is 256KB)
 export HTEST_BUF_SIZE=$((256*1024))
+
+# Number of connections. In hyper, this will create as many hyper::client::Client instances
 export HTEST_CONN_COUNT=1
 ```
