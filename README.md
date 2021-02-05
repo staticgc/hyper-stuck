@@ -19,10 +19,54 @@ $ echo hello | curl -X POST -k --http2 --data-binary @- $HTEST_URL
 ```
 
 
-## Building and running
+## Building 
 
-1. Generate Certs first
+1. Generate certs first (openssl needed)
 
+```bash
+cd certs
+bash ../gencert.sh
+```
+
+2. Build server
+
+```bash
+go build ./cmd/dtsrv
+```
+
+3. Build go client
+
+```bash
+go build ./cmd/h2go
+```
+
+4. Build rust client
+
+```bash
+cargo build --release
+```
+
+## Running
+
+1. Running server
+
+```bash
+./dtsrv
+```
+
+2. Running Rust Client
+
+```bash
+source test.env
+./target/release/hyper-stuck
+```
+
+3. Running Go client
+
+```bash
+export GODEBUG=x509ignoreCN=0
+./h2go
+```
 
 ## Params for the hyper client
 
