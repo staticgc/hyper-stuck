@@ -9,7 +9,7 @@
 
 * `./src/main.rs` => Rust Http Client
 
-## What happens in this client
+## What happens between client & server
 
 A simple REST API which expects byte buffer in a body and responds back length of the buffer in a json.
 
