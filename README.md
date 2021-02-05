@@ -53,7 +53,7 @@ cargo build --release
 1. Running server
 
 ```bash
-./dtsrv
+./h2srv
 ```
 
 2. Running Rust Client
